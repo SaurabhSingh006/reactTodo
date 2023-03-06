@@ -17,6 +17,13 @@ function App() {
     e.preventDefault();
   }
 
+  const updateTask = (e) => {
+    const id = parseInt(e.target.id);
+    const tasks = JSON.parse(JSON.stringify(taskList));
+    tasks[id].status = "Completed";
+    setTaskList(tasks)
+  }
+
   return (
     <div className="App">
       <h1>TODO App</h1>
@@ -25,7 +32,7 @@ function App() {
         <button className='btn-grad' onClick={handleInput}>Add task</button>
       </form>
  
-      <ListTask list={taskList} ></ListTask>
+      <ListTask list={taskList} updateTask={() => updateTask}></ListTask>
     </div>
   );
 }

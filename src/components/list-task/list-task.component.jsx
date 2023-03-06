@@ -1,6 +1,6 @@
 import './list-task.styles.scss';
 
-function renderList(list) {
+function renderList({ list, updateTask }) {
     if(list.length) {
         return (
             list.map((task,i) => (
@@ -9,6 +9,7 @@ function renderList(list) {
                     <td>{task.task}</td>
                     <td>{task.status}</td>
                     <td>{task.date.split(',')[0]}</td>
+                    <td><button id={i} onClick={updateTask(task)}>Complete</button></td>
                 </tr>
             ))
         )
@@ -22,7 +23,7 @@ export default function ListTask (props) {
 
         <div className="container" style={{ textAlign: 'left' }}>
             <h3 style={{ fontSize: '1.6rem'  }}>Task lists</h3>
-            <div style={{ overflowX: "scroll" }}>
+            <div style={{ overflow: "scroll", height: "50vh" }}>
                 <table>
                     <tr>
                         <th>No</th>
@@ -31,7 +32,7 @@ export default function ListTask (props) {
                         <th>Created At</th>
                         <th>Action</th>
                     </tr>
-                    { renderList(props.list) }
+                    { renderList(props) }
                 </table>
             </div>
         </div>

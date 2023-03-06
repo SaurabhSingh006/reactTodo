@@ -37,7 +37,7 @@ table{
 }
 
 tr:nth-child(even) {
-    background-color: #19911d28;
+    background-color: #1b881f19;
 }
 
 th {
@@ -49,4 +49,19 @@ th {
 td {
     font-weight: 300;
     font-size: 14px;
+
+    button {
+        background-color: transparent;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, #6A9113 0%, #141517  51%, #6A9113  100%);
+        padding: 2px 4px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        border-radius: 3px;
+        display: inline-block;
+        font-size: 12px;
+    }
 }
