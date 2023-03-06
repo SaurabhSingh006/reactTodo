@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+
+h1 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: transparent;
+  
+  /* text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000; */
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+button {
+  background-color: transparent;
+  font-size: 1.5rem;
+  margin: .2rem 1rem;
+  border: none;
+  background-color: green;
+  font-size: 1rem;
+}
+         
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #6A9113 0%, #141517  51%, #6A9113  100%);
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
